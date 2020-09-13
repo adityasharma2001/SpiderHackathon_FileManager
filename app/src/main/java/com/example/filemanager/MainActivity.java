@@ -217,8 +217,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     textAdapter.setData(fileList);
-                    selection = new boolean[files.length];
-                    textAdapter.setSelection(selection);
+//                    selection = new boolean[files.length];
+//                    textAdapter.setSelection(selection);
 
 
                 }
@@ -393,6 +393,7 @@ public class MainActivity extends AppCompatActivity {
                             final File newFolder = new File(rootPath + "/" + input.getText());
                             if(!newFolder.exists()){
                                 newFolder.mkdir();
+
                                 files = dir.listFiles();
                                 filesCount = files.length;
                                 fileList.clear();
@@ -401,6 +402,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 textAdapter.setData(fileList);
+
                             }
                         }
                     });
